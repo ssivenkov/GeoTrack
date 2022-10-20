@@ -1,0 +1,8 @@
+export const COLORS = {
+  MALACHITE: '#12D983',
+  NIAGARA: '#0BB6B0',
+  CORNFLOWER_BLUE: '#4285F4',
+  TORY_BLUE: '#0B47B6',
+  WHITE: '#FFFFFF',
+  DUSTY_GRAY: '#999999',
+};
