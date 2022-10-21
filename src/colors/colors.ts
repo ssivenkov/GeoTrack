@@ -5,4 +5,5 @@ export const COLORS = {
   TORY_BLUE: '#0B47B6',
   WHITE: '#FFFFFF',
   DUSTY_GRAY: '#999999',
+  BLACK: '#000000',
 };
