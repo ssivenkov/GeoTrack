@@ -6,6 +6,5 @@ export type SignInButtonPropsType = {
   serviceTitle: string;
   icon: IconDefinition;
   disabled: boolean;
-
-  onPress?: () => void;
+  onPress: () => void;
 };
