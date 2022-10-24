@@ -1,0 +1,8 @@
+export enum USER_SAGA_ACTION {
+  CHECK_USER = 'userSaga/CHECK_USER',
+  SYNC_USER_DATA = 'userSaga/SYNC_USER_DATA',
+  GOOGLE_SIGN_IN = 'userSaga/GOOGLE_SIGN_IN',
+  SIGN_OUT = 'userSaga/SIGN_OUT',
+  DELETE_ACCOUNT = 'userSaga/DELETE_ACCOUNT',
+  GET_USER_DATA = 'userSaga/GET_USER_DATA',
+}
