@@ -1,6 +1,8 @@
 apply plugin: "com.android.application"
 apply plugin: 'com.google.gms.google-services'
 
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
 
@@ -142,6 +144,9 @@ android {
         versionCode 1
         versionName "1.0"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+        manifestPlaceholders = [
+            ANDROID_GOOGLE_MAPS_API_KEY: project.env.ANDROID_GOOGLE_MAPS_API_KEY
+        ]
 
         if (isNewArchitectureEnabled()) {
             // We configure the CMake build only if you decide to opt-in for the New Architecture.
