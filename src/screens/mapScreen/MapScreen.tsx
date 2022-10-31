@@ -16,6 +16,7 @@ export const MapScreen = () => {
           latitudeDelta: 0.015,
           longitudeDelta: 0.0121,
         }}
+        showsUserLocation
         style={styles.map}
       >
         <Circle
