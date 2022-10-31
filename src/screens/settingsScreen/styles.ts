@@ -6,6 +6,9 @@ type UserScreenStylesType = {
   userInfoContainer: ViewStyle;
   avatar: ImageStyle;
   name: TextStyle;
+  buttonContainer: ViewStyle;
+  button: ViewStyle;
+  buttonText: TextStyle;
   text: TextStyle;
 };
 
@@ -37,6 +40,22 @@ export const styles = StyleSheet.create<UserScreenStylesType>({
     color: COLORS.BLACK,
     marginTop: 20,
     marginBottom: 5,
+  },
+
+  buttonContainer: {
+    marginBottom: 25,
+  },
+
+  button: {
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 7,
+    backgroundColor: COLORS.TORY_BLUE,
+  },
+
+  buttonText: {
+    fontSize: 18,
+    color: COLORS.WHITE,
   },
 
   text: {

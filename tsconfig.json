@@ -21,6 +21,7 @@
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@enums/*": ["src/enums/*"],
+      "@lib/*": ["src/lib/*"],
       "@navigation/*": ["src/navigation/*"],
       "@screens/*": ["src/screens/*"],
       "@store/*": ["src/store/*"]
