@@ -12,7 +12,7 @@ import { Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { useDispatch } from 'react-redux';
 
-const { MALACHITE, NIAGARA, TORY_BLUE } = COLORS;
+const { MALACHITE2, NIAGARA, TORY_BLUE } = COLORS;
 
 export const SignInScreen = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ export const SignInScreen = () => {
   };
 
   return (
-    <LinearGradient colors={[MALACHITE, NIAGARA, TORY_BLUE]}>
+    <LinearGradient colors={[MALACHITE2, NIAGARA, TORY_BLUE]}>
       {waitingUserData ? (
         <Loader />
       ) : (
