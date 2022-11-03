@@ -25,6 +25,7 @@ module.exports = {
           '@components': `${root}/src/components`,
           '@constants': `${root}/src/constants`,
           '@enums': `${root}/src/enums`,
+          '@lib': `${root}/src/lib`,
           '@navigation': `${root}/src/navigation`,
           '@screens': `${root}/src/screens`,
           '@store': `${root}/src/store`,
