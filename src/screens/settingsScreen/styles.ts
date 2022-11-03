@@ -8,8 +8,12 @@ type UserScreenStylesType = {
   name: TextStyle;
   buttonContainer: ViewStyle;
   button: ViewStyle;
+  buttonDisabled: ViewStyle;
   buttonText: TextStyle;
   text: TextStyle;
+  switchContainer: ViewStyle;
+  enabledSwitch: ViewStyle;
+  disabledSwitch: ViewStyle;
 };
 
 const avatarSize = 100;
@@ -49,8 +53,13 @@ export const styles = StyleSheet.create<UserScreenStylesType>({
   button: {
     paddingVertical: 5,
     paddingHorizontal: 10,
+    marginVertical: 14,
     borderRadius: 7,
     backgroundColor: COLORS.TORY_BLUE,
+  },
+
+  buttonDisabled: {
+    opacity: 0.3,
   },
 
   buttonText: {
@@ -61,5 +70,17 @@ export const styles = StyleSheet.create<UserScreenStylesType>({
   text: {
     fontSize: 18,
     color: COLORS.BLACK,
+  },
+
+  switchContainer: {
+    alignItems: 'center',
+  },
+
+  enabledSwitch: {
+    opacity: 1,
+  },
+
+  disabledSwitch: {
+    opacity: 0.35,
   },
 });
