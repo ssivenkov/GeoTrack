@@ -14,6 +14,8 @@ import BackgroundGeolocation, {
   State,
   Subscription,
 } from '@lib/react-native-background-geolocation/react-native-background-geolocation';
+import notifee from '@notifee/react-native';
+import { showNotification } from '@root/helpers/showNotification';
 import { Nullable } from '@root/types/common/types';
 import {
   GEOFENCE_FILL_COLOR,
@@ -30,12 +32,12 @@ import {
   undefinedLocation,
 } from '@screens/mapScreen/initialStates';
 import {
-  TriggeredGeofenceEventMarkerType,
+  CoordinatesType,
+  GeofenceType,
   MapCenterType,
   MarkerType,
   StopZoneType,
-  CoordinatesType,
-  GeofenceType,
+  TriggeredGeofenceEventMarkerType,
   TriggeredGeofenceType,
 } from '@screens/mapScreen/types';
 import { View } from 'react-native';
@@ -275,6 +277,10 @@ export const MapScreen = () => {
     });
 
     if (!triggeredGeofence && geofenceEvent !== null) {
+      console.log('newTriggeredGeofence');
+
+      showNotification();
+
       const newTriggeredGeofence: TriggeredGeofenceType = {
         identifier: geofenceEvent.identifier,
         radius: geofence.radius,
