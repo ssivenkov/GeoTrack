@@ -61,7 +61,7 @@
     "react/no-array-index-key": "error",
     "react/no-arrow-function-lifecycle": "error",
     "react/no-danger": "error",
-    "react/no-multi-comp": "error",
+    "react/no-multi-comp": "off",
     "react/no-namespace": "error",
     "react/no-this-in-sfc": "error",
     "react/no-unsafe": "error",
@@ -120,18 +120,16 @@
     "react-hooks/exhaustive-deps": "off",
 
     // notation
-    "camelcase": "error",
+    "camelcase": "off",
     "dot-notation": "error",
 
     // naming
     "id-denylist": ["error", "data", "err", "e", "cb", "callback"],
     "new-cap": "error",
     "no-label-var": "error",
-    "no-underscore-dangle": ["error", {
-      "allow": ["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"]
-    }],
+    "no-underscore-dangle": "off",
     "no-useless-rename": "error",
-    "no-magic-numbers": ["error", {"ignore": [-1, 0, 1]}],
+    "no-magic-numbers": "off",
 
     // strings
     "no-multi-str": "error",
@@ -144,7 +142,7 @@
 
     // functions
     "no-empty-function": "error",
-    "require-await": "error",
+    "require-await": "off",
 
     // objects
     "no-new": "error",

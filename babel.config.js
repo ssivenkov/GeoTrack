@@ -1,3 +1,36 @@
+const path = require('path');
+
+const root = path.resolve(__dirname);
+
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
+  plugins: [
+    [
+      "module:react-native-dotenv",
+      {
+        moduleName: "@env",
+        path: ".env",
+        safe: false,
+        allowUndefined: true
+      },
+    ],
+    [
+      'module-resolver',
+      {
+        root: [root],
+        extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
+        alias: {
+          '@root': `${root}/src`,
+          '@colors': `${root}/src/colors`,
+          '@components': `${root}/src/components`,
+          '@constants': `${root}/src/constants`,
+          '@enums': `${root}/src/enums`,
+          '@lib': `${root}/src/lib`,
+          '@navigation': `${root}/src/navigation`,
+          '@screens': `${root}/src/screens`,
+          '@store': `${root}/src/store`,
+        },
+      },
+    ],
+  ],
 };

@@ -18,11 +18,12 @@
     "paths": {
       "@root/*": ["src/*"],
       "@colors/*": ["src/colors/*"],
-      "@commonTypes/*": ["src/commonTypes/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@enums/*": ["src/enums/*"],
+      "@lib/*": ["src/lib/*"],
       "@navigation/*": ["src/navigation/*"],
+      "@screens/*": ["src/screens/*"],
       "@store/*": ["src/store/*"]
     },
     "resolveJsonModule": true,
@@ -30,8 +31,7 @@
     "strict": true,
     "target": "ESNext",
     "typeRoots": [
-      "./node_modules/@types",
-      "./src/types/env"
+      "./node_modules/@types"
     ]
   },
   "include": ["./src", "index.js"],
@@ -40,6 +40,6 @@
     "babel.config.js",
     "metro.config.js",
     "jest.config.js",
-    "lint-staged.config.js",
+    "lint-staged.config.js"
   ]
 }

@@ -6,6 +6,8 @@ buildscript {
         minSdkVersion = 21
         compileSdkVersion = 31
         targetSdkVersion = 31
+        appCompatVersion = "1.4.2"
+        googlePlayServicesLocationVersion = "20.0.0"
 
         if (System.properties['os.arch'] == "aarch64") {
             // For M1 Users we need to use the NDK 24 which added support for aarch64
@@ -20,9 +22,11 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.2.1")
+        // classpath("com.android.tools.build:gradle:7.2.1")
+        classpath("com.android.tools.build:gradle:4.2.2")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("de.undercouch:gradle-download-task:5.0.1")
+        classpath 'com.google.gms:google-services:4.3.13'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -38,6 +42,14 @@ allprojects {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
         }
+        maven {
+            // Required for react-native-background-geolocation
+            url("${project(':react-native-background-geolocation').projectDir}/libs")
+        }
+        maven {
+            // Required for react-native-background-fetch
+            url("${project(':react-native-background-fetch').projectDir}/libs")
+        }
         mavenCentral {
             // We don't want to fetch react-native from Maven Central as there are
             // older versions over there.
@@ -46,6 +58,7 @@ allprojects {
             }
         }
         google()
+        mavenCentral()
         maven { url 'https://www.jitpack.io' }
     }
 }
