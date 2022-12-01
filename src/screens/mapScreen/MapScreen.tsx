@@ -399,7 +399,7 @@ export const MapScreen = () => {
           <View key={item.key}>
             <Polyline
               coordinates={[computedCoordinates, coordinates]}
-              geodesic
+              geodesic={true}
               key='polyline'
               lineCap='square'
               strokeColor={BLACK}
@@ -544,8 +544,8 @@ export const MapScreen = () => {
         provider={PROVIDER_GOOGLE}
         region={mapCenter}
         scrollEnabled={mapScrollEnabled}
-        showsMyLocationButton
-        showsPointsOfInterest
+        showsMyLocationButton={true}
+        showsPointsOfInterest={true}
         showsScale={false}
         showsTraffic={false}
         showsUserLocation={isShowUserLocation}
@@ -565,7 +565,7 @@ export const MapScreen = () => {
         />
         <Polyline
           coordinates={coordinates}
-          geodesic
+          geodesic={true}
           key='polyline'
           strokeColor={POLYLINE_COLOR}
           strokeWidth={6}
