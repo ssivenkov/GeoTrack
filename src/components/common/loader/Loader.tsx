@@ -8,7 +8,10 @@ import { styles } from './styles';
 export const Loader = () => {
   return (
     <View style={[StyleSheet.absoluteFillObject, styles.loaderContainer]}>
-      <LottieView autoPlay source={require('../../../assets/images/loader.json')} />
+      <LottieView
+        autoPlay={true}
+        source={require('../../../assets/images/loader.json')}
+      />
     </View>
   );
 };

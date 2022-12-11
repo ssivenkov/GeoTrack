@@ -68,10 +68,13 @@
   },
   "scripts": {
     "husky_install": "husky install",
+    "reinstall_packages_MacOS": "rm -rf node_modules && yarn",
+    "reinstall_packages_Windows": "RMDIR /Q/S node_modules && yarn",
     "start": "react-native start --reset-cache",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint . --color && tsc --noEmit",
+    "search_global_errors": "npx react-native doctor",
     "fix_Exit_code_7": "adb uninstall com.geotrack",
     "metro_connect": "adb -s 18aeadf7 reverse tcp:8081 tcp:8081",
     "gradle_clean_MacOS": "cd android && ./gradlew clean && cd ..",
